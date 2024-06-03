@@ -1,1 +1,1 @@
-# cs312_project_pt2
+# This a repo for CS 312 System Administration Course Project Part 2
