@@ -23,7 +23,7 @@ data "aws_vpc" "default" {
 
 resource "aws_instance" "app_server" {
   ami                    = "ami-01cd4de4363ab6ee8"
-  instance_type          = "t2.micro"
+  instance_type          = "t2.medium"
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
   key_name               = aws_key_pair.kp.key_name
   tags = {

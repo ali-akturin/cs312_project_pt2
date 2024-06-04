@@ -1,0 +1,38 @@
+---
+- name: Deploy Minecraft server on EC2 instance
+  hosts: servers
+  remote_user: ec2-user
+  vars:
+    ansible_ssh_private_key_file: ~/.ssh/mc_server_auto
+    docker_image: itzg/minecraft-server
+    docker_container_name: mc
+    docker_container_ports:
+      - "25565:25565"
+  tasks:
+    - name: Install Docker
+      yum:
+        name: docker
+        state: latest
+      become: yes
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+      become: yes
+
+    - name: Pull Docker image
+      docker_image:
+        name: "{{ docker_image }}"
+        source: pull
+      become: yes
+
+    - name: Run Docker container
+      docker_container:
+        name: "{{ docker_container_name }}"
+        image: "{{ docker_image }}"
+        state: started
+        recreate: yes
+        detach: true
+        ports: "{{ docker_container_ports }}"
+      become: yes
