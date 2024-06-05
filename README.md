@@ -10,9 +10,9 @@ Hi! In this tutorial, we will create an infrastructure that automatically starts
 
 How will we do it?
 
-We will use Hashicorp Terraform to set up our infrastructure. Terraform is an infrastructure as code tool that we will use to deploy and configure our AWS EC2 instance. [Here's a link that explains what is Terraform](https://developer.hashicorp.com/terraform/intro)
+We will use Hashicorp Terraform to set up our infrastructure. Terraform is an infrastructure as code tool that we will use to deploy our AWS EC2 instance. [Here's a link that explains what is Terraform](https://developer.hashicorp.com/terraform/intro)
 
-Then we will use our bash script to run a Docker container of a Minecraft Server. [Here's the link to the docker image](https://hub.docker.com/r/itzg/minecraft-server)
+Then we will use our bash script to configure our EC2 instance and run a Docker container of a Minecraft Server. [Here's the link to the docker image](https://hub.docker.com/r/itzg/minecraft-server)
 
 That's it!
 ## Requirements
