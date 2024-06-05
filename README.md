@@ -8,13 +8,11 @@ Assignment: Course Project Part 2
 ## Background: What will we do? How will we do it?
 Hi! In this tutorial, we will create an infrastructure that automatically starts a Minecraft server on an AWS EC2 instance with just a few commands! 
 
-How will we do it?
+**How will we do it?**
 
-We will use Hashicorp Terraform to set up our infrastructure. Terraform is an infrastructure as code tool that we will use to deploy our AWS EC2 instance. [Here's a link that explains what is Terraform](https://developer.hashicorp.com/terraform/intro)
+We will use Hashicorp Terraform to set up our infrastructure. Terraform is an infrastructure as code tool that we will use to deploy our AWS EC2 instance. Instead of spending time manually configuring instance parameters, security groups, elastic IP, and AMI, Terraform allows us to automatically do that by using scripting. [Here's a link that explains what is Terraform](https://developer.hashicorp.com/terraform/intro)
 
-Then we will use our bash script to configure our EC2 instance and run a Minecraft Server using Docker Container. [Here's the link to the docker image](https://hub.docker.com/r/itzg/minecraft-server)
-
-That's it!
+Then we will use our bash script to configure our EC2 instance and run a Minecraft Server using Docker Container. [Here's the link to the docker image](https://hub.docker.com/r/itzg/minecraft-server) Using the Minecraft Server Docker image saves us a lot of time and allows us to easily configure the server using the docker-compose.yml file. Additionally, the provided Minecraft Server image stops the server appropriately on the instance shutdown.
 ## Requirements
 To run the scripts, you will need to have the following:
 1. You will need your AWS account's credentials stored in ~/.aws/credentials file
