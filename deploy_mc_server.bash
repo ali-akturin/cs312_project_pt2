@@ -32,3 +32,5 @@ ssh -i "$KEY_PATH" "$USER"@"$HOST" << EOF
   sudo systemctl enable docker_boot.service
   sudo systemctl start docker_boot.service
 EOF
+
+echo "Minecraft server ip: $(<server_ip.txt )"
