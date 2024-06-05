@@ -24,6 +24,8 @@ To run the scripts, you will need to have the following:
 
 ## Major steps
 
+![Picture of teh major steps in the pipeline](project_diagram.svg)
+
 ## List of commands to run
 
 ### Installing AWS CLI
@@ -87,11 +89,13 @@ This will run the Terraform script to provision our AWS EC2 instance
 terraform apply
 ```
 
-This command will run the bash script, which installs docker on our EC2 instance, creates a systemd service file that makes the server run on boot, and runs a Docker container that starts a Minecraft Server on the EC2 instance.
+This command will run the bash script, which installs docker on our EC2 instance, creates a systemd service file that makes the server run on boot, and runs a Docker container that starts a Minecraft Server on the EC2 instance. This command will also print the server's IP address.
 Answer
 ```
 bash deploy_mc_server.bash    
 ```
+
+**Congratulations! Your Minecraft server is set up. Give it a minute or two to start. Thank you for following my tutorial.**
 ## How to connect to the Minecraft server once it's running?
 After you've run all scripts, the public IP of your Minecraft server will be stored in **server_ip.txt** file. Copy it and connect to the server using a Minecraft launcher.
 
