@@ -95,7 +95,7 @@ Answer
 bash deploy_mc_server.bash    
 ```
 
-**Congratulations! Your Minecraft server is set up. Give it a minute or two to start. Thank you for following my tutorial.**
+**Congratulations! Your Minecraft server is set up. Give it a minute or two to start. Thank you for following my tutorial🦫**
 ## How to connect to the Minecraft server once it's running?
 After you've run all scripts, the public IP of your Minecraft server will be stored in **server_ip.txt** file. Copy it and connect to the server using a Minecraft launcher.
 
