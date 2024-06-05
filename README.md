@@ -87,7 +87,7 @@ This will run the Terraform script to provision our AWS EC2 instance
 terraform apply
 ```
 
-This command will run the bash script, which installs docker on our EC2 instance, creates a systemd service file that makes the server run on boot, and runs a Docker container that starts a Minecraft Server on the EC2 instance. This command will also print the server's IP address.
+This command will run the bash script, which installs docker on our EC2 instance, creates a systemd service file that makes the server run on boot, and sets up/runs a Docker container that starts a Minecraft Server on the EC2 instance. This command will also print the server's IP address.
 Answer
 ```
 bash deploy_mc_server.bash    
